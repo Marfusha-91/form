@@ -1,0 +1,75 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.app-input {
+  background: rgba(255, 255, 255, .8);
+  width: 200px;
+  height: 30px;
+  border: solid 1px white;
+  overflow: hidden;
+  position: relative;
+  transform: skewX(-30deg);
+  transform-origin: 0 100%;
+  line-height: 5px;
+}
+
+input::placeholder {
+  transform: skewX(30deg);
+  padding-left: 5px;
+}
+
+.send-button {
+  transform: skewX(-30deg);
+  background-color: red;
+  width: 150px;
+  height: 34px;
+  border: solid 1px white;
+  margin-left: 6px;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 5px;
+  // line-height: 2px;
+}
+
+.send-button:hover {
+  background: rgb(178, 34, 34);
+}
+
+.send-button:active {
+  background: rgb(178, 34, 34);
+  box-shadow: 0 3px rgb(178, 34, 34) inset;
+}
+
+.text {
+  color: white;
+  transform: skewX(20deg);
+  font-size: 18px;
+  font-style: normal
+}
+
+@media (max-width: 416px) {
+  .app-input {
+    width: 80px;
+    transform: none;
+  }
+  input::placeholder {
+    transform: none;
+  }
+  .send-button {
+    transform: none;
+    width: 90px;
+    margin-left: -5px;
+    padding-bottom: 2px;
+  }
+  .text {
+    transform: none;
+    font-size: 13px;
+
+  }
+
+}
+
